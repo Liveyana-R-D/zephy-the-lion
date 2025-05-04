@@ -129,11 +129,51 @@ progress {
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
+  body {
+    padding: 10px;
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .pet-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  #mood, #level {
+    font-size: 1rem;
+  }
+
   button {
-    padding: 8px 16px;
+    padding: 10px;
+    margin: 6px;
     font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  progress {
+    height: 12px;
+  }
+
+  .pet-card {
+    padding: 1rem;
+  }
+
+  .pet-card p {
+    font-size: 0.95rem;
+  }
+
+  .pet-card button {
+    width: 100%;
+    padding: 0.5rem;
   }
 }
