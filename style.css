@@ -1,46 +1,57 @@
+/* Base styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #fff3e0, #ffe0b2);
   text-align: center;
   padding: 20px;
+  margin: 0;
 }
 
 h1 {
   font-family: cursive;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #bf360c;
 }
 
+/* Pet container */
 .pet-container {
-  margin: 20px auto;
   background: #fff;
   border-radius: 20px;
   padding: 30px;
-  width: 90%;
-  max-width: 320px;
+  max-width: 500px;
+  margin: 20px auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Pet image */
 #petImage {
   max-width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+  border-radius: 16px;
 }
 
 #mood, #level {
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #5d4037;
 }
 
+/* Buttons */
 .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
 button {
-  padding: 10px 20px;
-  margin: 8px;
+  padding: 10px 18px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
@@ -54,13 +65,15 @@ button:hover {
   background-color: #ffb74d;
 }
 
+/* Bars */
 .bars {
+  width: 100%;
   margin-top: 20px;
   text-align: left;
 }
 
 label {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #5d4037;
   display: block;
   margin-top: 10px;
@@ -73,25 +86,20 @@ progress {
   overflow: hidden;
 }
 
-
+/* Pet card */
 .pet-card {
-  max-width: 350px;
+  max-width: 600px;
   margin: 2rem auto;
   background: linear-gradient(135deg, #fff9e6, #ffe4d6);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   border-radius: 20px;
   padding: 1.5rem;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  transition: transform 0.3s ease;
-}
-
-.pet-card:hover {
-  transform: scale(1.05);
 }
 
 .pet-img {
-  max-width: 100%;
+  max-width: 150px;
+  width: 100%;
   height: auto;
   border-radius: 50%;
   margin-bottom: 1rem;
@@ -101,6 +109,7 @@ progress {
 .pet-card h2 {
   color: #d88a27;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .pet-card span {
@@ -111,6 +120,7 @@ progress {
 .pet-card p {
   font-size: 1rem;
   color: #444;
+  padding: 0 10px;
 }
 
 .pet-card button {
@@ -128,54 +138,50 @@ progress {
   background-color: #c6791e;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
+  .buttons button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
   }
 
   .pet-container {
-    width: 95%;
-    max-width: none;
-    padding: 16px;
-  }
-
-  #mood, #level {
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 10px;
-    margin: 6px;
-    font-size: 0.9rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
-  }
-
-  progress {
-    height: 12px;
+    padding: 20px;
   }
 
   .pet-card {
     padding: 1rem;
   }
 
+  .pet-card h2 {
+    font-size: 1.3rem;
+  }
+
   .pet-card p {
     font-size: 0.95rem;
   }
+}
 
-  .pet-card button {
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons button {
     width: 100%;
-    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .bars label {
+    font-size: 0.85rem;
   }
 }
