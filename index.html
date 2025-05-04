@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Pet Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/zephy.avif">
+</head>
+<body>
+  <h1>Zephy - The Lion</h1>
+
+  <div class="pet-container">
+    <img id="petImage" src="images/lion-happy.avif" alt="Pet Image">
+
+    <div id="mood">Zephy is feeling great!</div>
+    <div id="level">Level: 1 | XP: 0/100</div>
+
+    <div class="bars">
+      <label>Hunger</label>
+      <progress id="hungerBar" value="80" max="100"></progress>
+
+      <label>Happiness</label>
+      <progress id="happinessBar" value="90" max="100"></progress>
+
+      <label>Energy</label>
+      <progress id="energyBar" value="70" max="100"></progress>
+    </div>
+
+    <div class="buttons">
+      <button onclick="feedPet()">Feed</button>
+      <button onclick="playWithPet()">Play</button>
+      <button onclick="cleanPet()">Clean</button>
+      <button onclick="restPet()">Sleep</button>
+      <button onclick="roar()">Roar</button>
+      <button onclick="resetGame()">Reset</button>
+    </div>
+  </div>
+
+  <div class="pet-card">
+  <img src="images/zephy.avif" alt="Zephy the Lion" class="pet-img" />
+  <h2>Zephiron <span>(Zephy)</span></h2>
+  <p>Zephiron, known lovingly as Zephy, is a mystical lion born from the winds of an ancient realm. With a heart as bold as thunder and a mane that shimmers like dawnlight, Zephy is both a fierce guardian and a playful companion—loyal to the end and full of wonder.</p>
+  <button onclick="roar()">Make Zephy Roar</button>
+</div>
+<audio id="roarSound" src="sounds/roar.mp3" preload="auto"></audio>
+
+
+  <audio id="roarSound" src="sounds/roar.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
