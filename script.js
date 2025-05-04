@@ -11,8 +11,6 @@ const hungerBar = document.getElementById("hungerBar");
 const happinessBar = document.getElementById("happinessBar");
 const energyBar = document.getElementById("energyBar");
 
-const clickSound = document.getElementById("clickSound");
-
 function updateBars() {
   hungerBar.value = hunger;
   happinessBar.value = happiness;
@@ -112,11 +110,14 @@ setInterval(() => {
 }, 10000); // Every 10 seconds
 
 // Click sound effect
+const clickSound = document.getElementById('clickSound');
 
-
-document.querySelectorAll("button").forEach(button => {
-  button.addEventListener("click", () => {
-    clickSound.currentTime = 0; // rewind to start
+// Attach sound to all buttons
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    clickSound.currentTime = 0;
     clickSound.play();
   });
 });
+
+
